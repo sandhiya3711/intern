@@ -17,29 +17,29 @@ function App() {
           <div className="pt-20"> {/* Offset for fixed Navbar */}
             <Routes>
               <Route path="/login" element={<LoginPage />} />
-          <Route 
-            path="/list" 
-            element={
-              <ProtectedRoute>
-                <ListPage />
-              </ProtectedRoute>
-            } 
-          />
-          <Route 
-            path="/details/:id" 
-            element={
-              <ProtectedRoute>
-                <DetailsPage />
-              </ProtectedRoute>
-            } 
-          />
-                <Route path="/analytics" element={<ProtectedRoute><AnalyticsPage /></ProtectedRoute>} />
-                <Route path="/" element={<Navigate to="/list" replace />} />
-              </Routes>
-            </div>
+              <Route 
+                path="/list" 
+                element={
+                  <ProtectedRoute>
+                    <ListPage />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/details/:id" 
+                element={
+                  <ProtectedRoute>
+                    <DetailsPage />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route path="/analytics" element={<ProtectedRoute><AnalyticsPage /></ProtectedRoute>} />
+              <Route path="/" element={<Navigate to="/list" replace />} />
+            </Routes>
           </div>
-        </Router>
-      </AuthProvider>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
